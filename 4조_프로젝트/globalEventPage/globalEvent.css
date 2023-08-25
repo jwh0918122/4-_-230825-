@@ -1,0 +1,534 @@
+@font-face {
+    font-family: harmonyB;
+    src: url(../font/현대하모니+B.ttf);
+}
+
+@font-face {
+    font-family: harmonyL;
+    src: url(../font/현대하모니+L.ttf);
+}
+
+@font-face {
+    font-family: harmonyM;
+    src: url(../font/현대하모니+M.ttf);
+}
+
+@font-face {
+    font-family: "고딕";
+    src: url(../font/NanumGothic-Regular.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0;
+    font-family: harmonyB;
+    border: none;
+    background-position: center;
+}
+
+/*영상*/
+video {
+    width: 100%;
+}
+
+a {
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/*영상 슬라이드 버튼*/
+.swiper-button-prev {
+    color: white;
+    left: 200px;
+}
+
+.swiper-button-next {
+    color: white;
+    right: 200px;
+}
+
+/*영상 속 텍스트*/
+.slideP {
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text p {
+    font-size: 48px;
+    text-align: center;
+    color: white;
+}
+
+.text p sup {
+    font-size: 14px;
+}
+
+#tm {
+    font-size: 30px;
+}
+
+/*img박스*/
+.box1 {
+    width: calc((100% / 3) * 2);
+    height: 500px;
+    background-image: url(../teamProjectImg/box1.jpg);
+    float: left;
+}
+
+.box2 {
+    width: calc(100% / 3);
+    height: 1000px;
+    background-image: url(../teamProjectImg/box2.jpg);
+    float: right
+}
+
+.box3 {
+    width: calc(100% / 3);
+    height: 500px;
+    background-image: url(../teamProjectImg/box3.jpg);
+    float: left
+}
+
+.box4 {
+    width: calc(100% / 3);
+    height: 500px;
+    background-image: url(../teamProjectImg/box4.jpg);
+}
+
+.box5 {
+    width: calc(100% / 3);
+    height: 1000px;
+    background-image: url(../teamProjectImg/box5.jpg);
+    float: left;
+}
+
+.box6 {
+    float: left;
+    width: calc(100% / 3);
+    height: 500px;
+    background-image: url(../teamProjectImg/box6.jpg);
+}
+
+.box7 {
+    float: right;
+    width: calc(100% / 3);
+    height: 500px;
+    background-image: url(../teamProjectImg/box7.jpg);
+}
+
+.box8 {
+    width: calc((100% / 3) * 2);
+    height: 500px;
+    background-image: url(../teamProjectImg/box8.jpg);
+    float: right;
+}
+
+.box9 {
+    width: calc(100% / 3);
+    height: 500px;
+    background-image: url(../teamProjectImg/box9.jpg);
+    float: left;
+}
+
+.box10 {
+    float: left;
+    width: calc(100% / 3);
+    height: 500px;
+    background-image: url(../teamProjectImg/box10.jpg);
+}
+
+.box11 {
+    float: left;
+    width: calc(100% / 3);
+    height: 500px;
+    background-image: url(../teamProjectImg/box11.jpg);
+}
+
+/*img 박스 filter hover*/
+.blue {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 44, 95, 1);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.blue:hover {
+    opacity: 0.5;
+}
+
+/* #blue {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 44, 95, 1);
+    display: none;
+
+} */
+
+
+/*img박스 속 텍스트*/
+.box a {
+    position: relative;
+    align-items: center;
+    text-align: left;
+    display: flex;
+}
+
+.box a p {
+    position: absolute;
+    color: white;
+}
+
+.a {
+    font-size: 16px;
+    bottom: 40px;
+    margin-bottom: 10px;
+    left: 20px;
+    float: left;
+}
+
+.b {
+    padding-top: 10px;
+    font-size: 23px;
+    bottom: 20px;
+    left: 20px;
+    float: left;
+}
+
+#a1,
+#b1 {
+    left: 40px;
+}
+
+#a3,
+#ap {
+    margin-bottom: 35px;
+}
+
+.box a p:last-child {
+    font-size: 20px;
+
+    font-family: harmonyL;
+    display: none;
+}
+
+#tx {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    color: rgba(0, 44, 95, 1);
+    font-family: harmonyB;
+    font-size: 70px;
+}
+
+
+/*********************************footer div *********************************/
+
+footer {
+    position: absolute;
+    background-color: rgb(28, 28, 28);
+    top: 3250px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.footerContainer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+
+.footerMenu1 {
+    margin-left: -100px;
+}
+
+
+.footerList1,
+.footerList2,
+.footerList3,
+.footerList4 {
+    padding: 2px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footerList1>li,
+.footerList2>li,
+.footerList3>li {
+    font-size: 14px;
+    font-style: initial;
+    color: rgb(182, 182, 182);
+
+}
+
+.footerList4>li {
+    font-size: 12px;
+    font-style: initial;
+    color: rgb(182, 182, 182);
+}
+
+.footerList1>li::after,
+.footerList2>li::after,
+.footerList3>li::after {
+    content: "|";
+    float: right;
+    display: block;
+}
+
+.footerList1>li:last-child::after,
+.footerList2>li:last-child::after,
+.footerList3>li:last-child::after {
+    content: "";
+    float: right;
+    display: block;
+}
+
+
+.footerList5 {
+    display: flex;
+}
+
+.footerList5>li {
+    margin: 10px;
+    list-style-type: none;
+}
+
+
+.footerContainer2 {
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+
+}
+
+
+
+.footerList6 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 25px;
+}
+
+
+.footerList6>li {
+    color: rgb(182, 182, 182);
+    font-size: 13px;
+    margin-right: 30px;
+    padding: 10px;
+
+}
+
+li {
+    font-family: "harmonyL";
+    list-style-type: none;
+    font-size: 10px;
+}
+
+/*****************************************************************************/
+
+header {
+    position: fixed;
+    background-image: url(../pictures/bgc투명.png);
+    height: 80px;
+    width: 100%;
+    z-index: 10;
+
+}
+
+/**********************main 헤더 모음**************************/
+
+.headerContainer {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerContainer:hover {
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+.headerContainer2 {
+    background-color: rgba(255, 255, 255, 0.92);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.headerContainer2>#inputSearch {
+    margin: auto;
+}
+
+
+/* 메인[일반메뉴1 div] */
+#mainLogo {
+    cursor: pointer;
+    width: 250px;
+    height: 30px;
+    margin-left: 250px;
+    margin-top: 25px;
+}
+
+.loginContainer {}
+
+
+.boxContainer,
+.loginContainer {
+    list-style: none;
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.boxContainer {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-left: -100px;
+}
+
+
+
+.headerContainer>.boxContainer>li {
+    font-family: "고딕";
+    font-style: italic;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* 메인[일반메뉴2 div] */
+
+.headerContainer>.loginContainer>li {
+    font-size: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+
+}
+
+#lgText {
+    font-weight: 700;
+}
+
+.bi-list {
+    position: absolute;
+    right: 215px;
+    top: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/****************************************************************/
+
+
+
+
+
+/************main hearder 반응형 search *********/
+
+
+#inputSearch {
+    position: relative;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    margin: 10px 20px;
+    width: 500px;
+    height: 40px;
+}
+
+.bi1,
+.bi2 {
+    cursor: pointer;
+    position: absolute;
+}
+
+.bi1 {
+    font-weight: 700;
+    margin-top: 30px;
+    right: 705px;
+
+}
+
+.bi2 {
+    color: rgb(168, 168, 168);
+    margin-top: 30px;
+    right: 740px;
+}
+
+#loginPageList {
+    position: absolute;
+    right: 280px;
+    top: 70px;
+    background-color: white;
+    width: 125px;
+    height: 100px;
+    border-radius: 20px;
+    border: 1px solid rgb(192, 192, 192);
+    display: none;
+}
+
+#loginPageList>li {
+    font-family: "현대폰트";
+    cursor: pointer;
+    margin-top: 15%;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+
+
+#bgcOverray {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+/*************************************************/

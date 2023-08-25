@@ -1,0 +1,715 @@
+@import url(reset.css);
+
+body {
+    font-family: "현대폰트";
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "현대폰트";
+    src: url(../font/현대하모니+L.ttf);
+}
+
+@font-face {
+    font-family: "현대폰트m";
+    src: url(../font/현대하모니+M.ttf);
+}
+
+
+@font-face {
+    font-family: "현대폰트b";
+    src: url(../font/현대하모니+B.ttf);
+}
+
+
+@font-face {
+    font-family: "나눔고딕";
+    src: url(../font/NanumGothic-Regular.ttf);
+}
+
+@font-face {
+    font-family: "나눔고딕eb";
+    src: url(../font/NanumGothic-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "나눔고딕b";
+    src: url(../font/NanumGothic-Bold.ttf);
+}
+
+/***********************************************************************/
+
+a {
+    color: black;
+}
+
+header {
+    position: fixed;
+    background-image: url(../pictures/bgc투명.png);
+    background-color: white;
+    height: 80px;
+    width: 100%;
+    margin-top: 0px;
+    z-index: 10;
+}
+
+.headerContainer {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .headerContainer:hover {
+    background-color: rgb(240, 240, 240, 0.9);
+} */
+
+.headerContainer2 {
+    background-color: rgb(240, 240, 240, 0.9);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.headerContainer2>#inputSearch {
+    margin: auto;
+}
+
+/* 메인[일반메뉴1 div] */
+#mainLogo {
+    cursor: pointer;
+    margin-left: 13%;
+    margin-top: 25px;
+
+}
+
+.loginContainer {
+    margin-right: 13%;
+}
+
+
+.boxContainer,
+.loginContainer {
+    list-style: none;
+    display: flex;
+    margin-top: 30px;
+}
+
+.boxContainer {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+
+.headerContainer>.boxContainer>li {
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* 메인[일반메뉴2 div] */
+
+.headerContainer>.loginContainer>li {
+    margin-left: 30px;
+    cursor: pointer;
+
+
+}
+
+#lgText {
+    font-weight: 700;
+}
+
+.bi-list {
+    position: absolute;
+    right: 215px;
+    top: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/************main hearder 반응형 search *********/
+
+
+#inputSearch {
+    position: relative;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    margin: 10px 20px;
+    width: 500px;
+    height: 40px;
+}
+
+.bi1,
+.bi2 {
+    cursor: pointer;
+    position: absolute;
+}
+
+.bi1 {
+    font-weight: 700;
+    margin-top: 30px;
+    right: 705px;
+
+}
+
+.bi2 {
+    color: rgb(168, 168, 168);
+    margin-top: 30px;
+    right: 740px;
+}
+
+#loginPageList {
+    position: absolute;
+    right: 280px;
+    top: 70px;
+    background-color: white;
+    width: 125px;
+    height: 100px;
+    border-radius: 20px;
+    border: 1px solid rgb(192, 192, 192);
+    display: none;
+}
+
+#loginPageList>li {
+    font-family: "현대폰트";
+    cursor: pointer;
+    margin-top: 15%;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+
+
+#bgcOverray {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/***********************************************************************/
+
+.bg_img {
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+    margin: auto;
+    background-image: url(../projectImg/bg_visual_cloud.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.fag_menu {
+    display: block;
+    margin: 0 auto;
+    width: calc(100% - 120px);
+}
+
+.fag_menu>ul {
+    display: flex;
+}
+
+.fag_menu>ul>li {
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    padding: 0 7px;
+    margin-top: 75px;
+}
+
+.fag_menu>ul>li:nth-last-child(1) {
+    color: #007fa8;
+}
+
+.bg_bottom {
+    display: block;
+    height: 270px;
+    margin: 0 60px;
+    margin-top: 20px;
+    padding-top: 60px;
+    background-color: hsla(0, 0%, 100%, .7);
+}
+
+.bg_bottom>.fag_title {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bg_bottom>.fag_title>h1 {
+    font-size: 58px;
+    margin: 0;
+    color: black;
+    line-height: 50px;
+}
+
+.bg_bottom>.fag_title>h3 {
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 500;
+}
+
+.guideContainer {
+    width: 100%;
+    min-height: 360px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin: auto;
+    border: 1px solid rgb(232, 233, 233);
+    border-top: none;
+}
+
+.guldeBox {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    background-color: #f6f3f2;
+}
+
+.guide {
+    padding: 80px;
+
+}
+
+.guide>ul>li {
+    list-style: disc;
+    margin: 25px;
+}
+
+.guide>ul>li>.link_line {
+    display: inline-block;
+    color: #006992;
+    white-space: nowrap;
+}
+
+.fag_Container {
+    display: none;
+    height: 600px;
+}
+
+.fag_content {
+    display: block;
+    margin: 0 auto;
+    width: 67%;
+    margin-top: 30px;
+}
+
+.war {
+    color: #bf1d00;
+}
+
+.fag_content>input {
+    margin: 20px;
+    width: 1000px;
+    height: 30px;
+    margin-left: 100px;
+    outline: none;
+}
+
+.center-label {
+    float: left;
+}
+
+.fag_content>#content {
+    width: 1000px;
+    height: 300px;
+    margin-left: 77px;
+    text-align: left;
+    font-size: 16px;
+    outline: none;
+}
+
+.fag_content>.btn_Container {
+    text-align: center;
+    padding: 30px;
+}
+
+.fag_content>.btn_Container>button {
+    width: 150px;
+    height: 60px;
+    font-size: 16px;
+    background-color: #002c5f;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.fag_content>.btn_Container>.cancel {
+    background-color: #767676;
+}
+
+
+/* 게시글 댓글 */
+
+
+
+.listContainer {
+    width: 100%;
+
+}
+
+.listTitle {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 150px;
+    margin-right: 50px;
+
+}
+
+.listTitle>h3 {
+    line-height: 100px;
+}
+
+
+
+.listTitle2 {
+    position: relative;
+    font-size: 20px;
+    margin-top: 50px;
+    width: 1000px;
+    display: flex;
+    margin-left: 430px;
+    border-top: 3px solid rgb(28, 105, 212);
+    background-color: rgb(224, 224, 224);
+    height: 70px;
+
+}
+
+.listTitle2>li {
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.listTitle2>button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(28, 105, 212);
+    font-family: "나눔고딕";
+    font-weight: 600;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.lastAdmin {
+    position: relative;
+}
+
+.adminResult {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: rgb(28, 105, 212);
+    font-family: "나눔고딕";
+    font-weight: 600;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.listTitle2>button:hover {
+    background-color: rgb(11, 48, 99);
+    transition: 0.5s;
+}
+
+#boardUI {
+    position: relative;
+    margin-left: 430px;
+    width: 1000px;
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+#boardUI>div {
+    border-bottom: 1px solid rgb(153, 153, 153);
+
+}
+
+#boardUI>div>ul {
+    display: flex;
+    position: relative;
+}
+
+/*버튼*/
+#boardUI>div>ul:first-child>.deleteBtn {
+    top: 10px;
+    right: 20px;
+    position: absolute;
+    margin-top: 10px;
+    font-size: 30px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.adminCmt {
+    width: 600px;
+    height: 100px;
+}
+
+#boardUI>div>ul:first-child>.downtoBtn {
+    top: 10px;
+    right: 70px;
+    position: absolute;
+    margin-top: 10px;
+    font-size: 30px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+#boardUI>div>ul:first-child>.uptoBtn {
+    display: none;
+    top: 10px;
+    right: 70px;
+    position: absolute;
+    margin-top: 10px;
+    font-size: 30px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.hider {
+    display: none;
+}
+
+
+#boardUI>div>ul:first-child:first-child {
+    border-bottom: 1px solid black;
+}
+
+
+/* 글 내용 */
+#boardUI>div>.boardTest {
+    display: none;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+
+.boardsize {
+    margin-left: 120px;
+    margin-top: -20px;
+}
+
+.apTarget {
+    position: absolute;
+}
+
+
+#boardUI>div>ul:last-child>li:nth-child(2) {
+    padding-top: 20px;
+    border-top: 1px solid black;
+
+}
+
+#boardUI>div>ul:last-child>li:nth-child(3) {
+    padding-top: 50px;
+    border-top: 1px solid black;
+
+}
+
+#boardUI>div>ul:last-child>li>span {
+    margin-left: 30px;
+
+}
+
+
+/* 말머리 */
+#boardUI>div>ul:first-child>li {
+    margin: 30px;
+}
+
+#boardUI>div>ul:last-child>li {
+    margin-bottom: 50px;
+}
+
+
+
+.closeBtn {
+    font-size: 200px;
+}
+
+
+
+/*글 목록*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************footer div *********************************/
+
+footer {
+    background-color: rgb(28, 28, 28);
+    /* margin-top: 100%; */
+    width: 100%;
+}
+
+
+
+.footerContainer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+
+.footerMenu1 {
+    margin-left: -100px;
+}
+
+
+.footerList1,
+.footerList2,
+.footerList3,
+.footerList4 {
+    padding: 2px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.footerList1>li,
+.footerList2>li,
+.footerList3>li {
+    font-size: 14px;
+    font-style: initial;
+    color: rgb(182, 182, 182);
+
+}
+
+.footerList4>li {
+    font-size: 12px;
+    font-style: initial;
+    color: rgb(182, 182, 182);
+}
+
+.footerList1>li::after,
+.footerList2>li::after,
+.footerList3>li::after {
+    content: "|";
+    float: right;
+    display: block;
+}
+
+.footerList1>li:last-child::after,
+.footerList2>li:last-child::after,
+.footerList3>li:last-child::after {
+    content: "";
+    float: right;
+    display: block;
+}
+
+
+.footerList5 {
+    display: flex;
+    list-style: none;
+}
+
+.footerList5>li {
+    margin: 10px;
+}
+
+
+.footerContainer2 {
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+
+}
+
+
+
+.footerList6 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 25px;
+    list-style: none;
+}
+
+
+.footerList6>li {
+    color: rgb(182, 182, 182);
+    font-size: 13px;
+    margin-right: 30px;
+    padding: 10px;
+}

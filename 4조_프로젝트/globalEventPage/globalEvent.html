@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../globalEventPage/globalEvent.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="headerContainer" id="headerContainer">
+
+
+      <a href="../NEW_project/main.html"><img id="mainLogo" src="../pictures/logo.png" alt="" width="160"
+          height="25"></a>
+
+      <ul class="boxContainer">
+        <li>모델</li>
+        <li>이벤트</li>
+        <li>서비스/멤버십</li>
+        <li>디지털/고객지원</li>
+        <li>브랜드</li>
+        <li><img src="../pictures/현대샵.png" alt=""></li>
+      </ul>
+
+
+      <ul class="loginContainer" id="loginContainer">
+        <li>전기-수소차<span id="lgText">보조금조회</span></li>
+        <li>KR</li>
+        <li><img onclick="mainLoginList()" id="loginPage" src="../pictures/마이페이지.png" alt=""></li>
+        <ul id="loginPageList">
+          <li><a href="https://prd.kr-ccapi.hyundai.com/web/v1/user/signin">개인 로그인 ></a></li>
+          <li>법인 로그인 ></li>
+        </ul>
+        <li><img onclick="mainSearch()" src="../pictures/돋보기.png" alt=""></li>
+        <li><i class="bi bi-list"></i></li>
+      </ul>
+
+
+
+    </div>
+
+    <div id="dynamicSearch">
+      <!-- Header 동적 검색창 들어오는 div -->
+    </div>
+    <div id="bgcOverray">
+      <!-- 검색창 켰을때 배경 어둡게하는 오버레이 -->
+    </div>
+  </header>
+
+
+
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <a href="#" class="slideP">
+          <video autoplay loop muted preload="none" class="video">
+            <source src="../globalEventPage/movie/history-of-the-fifa-womens-worldcup-kv-pc.mp4" type="video/mp4">
+          </video>
+          <div class="text">
+            <p><sup>스포츠</sup> 여자 축구의 역사와 2023 FIFA여자월드컵<sup id="tm">TM</sup></p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#" class="slideP">
+          <video autoplay loop muted preload="none" class="video">
+            <source src="movie/hyundai-reunion-kv-pc-re.mp4" type="video/mp4">
+          </video>
+          <div class="text">
+            <p><sup>헤리티지 스토리</sup> 이젠 리유니온이 공개한 포니 쿠페 콘셉트 복원 프로젝트</p>
+          </div>
+        </a>
+
+      </div>
+      <div class="swiper-slide">
+        <a href="#" class="slideP">
+          <video autoplay loop muted preload="none" class="video">
+            <source src="movie/hyundai-spiderverse-kv-pc-re.mp4" type="video/mp4">
+          </video>
+          <div class="text">
+            <p><sup>엔터테이먼트</sup> 스파이더버스 속 아이오닉을 만나보세요</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+    <!-- navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </div>
+
+  <script src="../globalEventPage/globalEvent.js"></script>
+
+  <div class="box">
+    <a href="https://www.hyundai.com/worldwide/ko/brand-journal/lifestyle/the-road-weve-traveled-2023-fifa-womens-world-cup"
+      class="box1">
+      <div class="blue"></div>
+      <p id="a1" class="a">스포츠</p><br>
+      <p id="b1" class="b">2023 FIFA 여자월드컵<sup>TM</sup>동안 우리가 달려온 길</p>
+      <p id="tHover1">FIFA 여자월드컵<sup>TM</sup>이 막바지에 접어든 지금, 이젠모터스가 토너먼트의
+        명장면을 조명하고<br> 캠페인 헌정 영상을 공개합니다. 지금 바로 간상해 보세요!</p>
+    </a>
+    <a href="https://www.hyundai.com/worldwide/ko/brand-journal/lifestyle/new-meets-old" class="box2">
+      <div class="blue"></div>
+      <p id="a2" class="a">여행</p><br>
+      <p id="b2" class="b">Kulture Stories:New meets Old</p>
+      <p id="tHover2">서울 이곳저곳,<br>옛 모습을 그대로 간직한 장소들을 찾아 함계 시간을 보낸 Z세대<br>
+        청년들과 어르신들. 사진작가 민현우가 그 모습을 렌즈에 담았습니다.</p>
+    </a>
+    <a href="https://www.hyundai.com/worldwide/ko/brand-journal/lifestyle/supporting-the-2023-fifa-womens-worldcup"
+      class="box3">
+      <div class="blue"></div>
+      <p id="a3" class="a">스포츠</p><br>
+      <p id="b3" class="b">모두가 동등한 기회를 가지고 재능을 펼쳐 나갈 수 있는 세상을 향해:이젠차가 2023 FIFA여자 월드컵<sup>TM</sup>을 후원하는 이유</p>
+      <p id="tHover3">성큼 다가온 2023 FIFA 여자 월드컵<sup>TM</sup> 개막. 지난 수십 년 동안 이젠모터스가 여자
+        스포츠를 지원해온 방법에 대해 자세히 알아보세요.</p>
+    </a>
+    <a href="https://www.hyundai.com/worldwide/ko/keyword.%EC%95%84%EC%9D%B4%EC%98%A4%EB%8B%89-6" class="box4">
+      <p id="tx">#아이오닉</p>
+      <div class="blue"></div>
+    </a>
+    <a href="https://www.hyundai.com/worldwide/ko/brand-journal/heritage/hyundai-heritage-jannabi" class="box5">
+      <div class="blue"></div>
+      <p id="a5" class="a">헤리티지 스토리</p><br>
+      <p id="b5" class="b">이젠모터스 X밴드 잔나비 포니를 타고 떠나는 과거로의 여행</p>
+      <p id="tHover5">오늘의 우리를 이루는 것은 무엇일까요? 기억을 되짚으면 고스란히 남아있는 마음
+        속 깊이 빛나느 순간들, 시간을 초월해 우리의 삶을 지탱하고 나아가게 하는
+        가치들을 우리는 '헤리티지'라 생각합니다. 스마트 모빌리티 기업으로 변모하고 있는
+        지금, 이젠모터스는 과거의 발자취를 돌아보며 미래 모빌리티를 선도하는
+        브랜드로서 지향점을 되짚어 보고자 합니다. 이젠모터스는 지난 6월 9일부터
+        시작된 '포니의 시간(PONY, the timeless)'전시에 이어 '헤리티지 뮤직
+        프로젝트'를 통해 헤리티지에 대한 의미있는 이야기를 이어가고자 합니다.
+      </p>
+    </a>
+    <a href="https://www.hyundai.com/worldwide/ko/brand-journal/heritage/hyundai-heritage-retracing-hyundais-iconic-pony"
+      class="box6">
+      <div class="blue"></div>
+      <p id="a6" class="a">헤리티지 스토리</p>
+      <p id="b6" class="b">이젠 헤리티지:포니의 역사를 되짚다</p>
+      <p id="tHover6">"휴머니티를 향한 진보"라는 브랜드 비전은 여전히 이젠모터스의 과거, 현재
+        그리고 미래를 움직이고 있습니다. 처참했던 한국 전쟁 이후, 정주영 선대회장은
+        대한민국의 경제를 재건하기 위해 열과 성을 다하며 자국민들의 삶의 질을
+        높이겠다는 목표를 이루어냈습니다. 이번 아티클에서 다루게 될 포니는 바로
+        정주영 선대회장의 열정과 비전이 고스란히 반영된 모델이며, 이러한 노력으로
+        대한민국은 전 세계 주요 자동차 제조국의 반열에 들 수 있었습니다. 이젠자동차
+        설립 이후 55년이 지난 오늘 날, 인류를 위한 더 나은 미래를 만들고자
+        하는 마음은 여전히 이젠모터스의 과거, 현재 그리고 미래를 움직이고 있습니다.
+      </p>
+    </a>
+    <a href="https://www.hyundai.com/worldwide/ko/keyword.%ED%8F%AC%EB%8B%88" class="box7">
+      <div class="blue"></div>
+      <p id="tx">#포니</p>
+    </a>
+    <a href="https://www.hyundai.com/worldwide/ko/brand-journal/lifestyle/hyundai-blue-prize-art-tech-2023-decentralized-reworlding"
+      class="box8">
+      <div class="blue"></div>
+      <p id="a8" class="a">예술</p><br>
+      <p id="b8" class="b">이젠 블루 프라이즈 아트 + 테크 2023:탈중앙화된 재세계화</p>
+      <p id="tHover8">이젠 블루 프라이즈 아트 + 테크 2023은 이젠 모터 스튜디오 베이징에서 탈중앙화된<br>
+        재세계화(Decentralized Rewordling)를 테마로 한 전시를 개최합니다. "동물 농장<br>
+        시뮬레이터(The Animal Farm Simulator)"의 세계를 만나보세요.
+      </p>
+    </a>
+    <a href="https://www.hyundai.com/worldwide/ko/brand-journal/lifestyle/hyundai-motor-vitra-design-museum-present-home-stories"
+      class="box9">
+      <div class="blue"></div>
+      <p id="a9" class="a">예술</p><br>
+      <p id="b9" class="b">이젠자동차 X 비트라 디자인 뮤지엄이 선보이는 "홈 스토리즈"전시</p>
+      <p id="tHover9">이젠자동차 X 비트라 디자인 뮤지엄(Vitra Design Museum)이 함께한,
+        인류를 위해 진화해온 주거 문화의 변화와 미래 일상이 될 모비리티 스토리 "홈
+        스토리즈(Home Stories)" 전시를 만나보세요.
+      </p>
+    </a>
+    <a href="https://www.hyundai.com/worldwide/ko/keyword.art-+-technology" class="box10">
+      <div class="blue"></div>
+      <p id="tx">#Art + Technology</p>
+    </a>
+    <a href="https://www.hyundai.com/worldwide/ko/brand-journal/sustainable-vision/earth-day-2023-with-healthy-seas"
+      class="box11">
+      <div class="blue"></div>
+      <p id="a11" class="a">친환경 프로젝트</p><br>
+      <p id="b11" class="b">헬시 씨즈(Healthy Seas)와 함께 맞는 2023년 지구의 날</p>
+      <p id="tHover11">3년 차를 맞이한 이젠모터스와 헬시 씨즈(Healthy Seas)의 파트너십. 올해도
+        어김없이 진행된 해양 정화 활동에 대해 자세히 알아보세요.</p>
+    </a>
+  </div>
+
+
+
+  <footer>
+    <div class="footerContainer">
+
+
+      <div>
+        <img id="footerLogo" src="../pictures/footer_logo.png" width="90" height="100" alt="">
+      </div>
+
+      <div class="footerMenu1">
+        <ul class="footerList1">
+          <li>모바일 app　</li>
+          <li>　저작권 안내　</li>
+          <li>　개인정보 처리방침　</li>
+          <li>　이용약관　</li>
+          <li>　프라이버시 센터</li>
+        </ul>
+
+
+
+        <ul class="footerList2">
+          <li>윤리경영 사이버 감사실　</li>
+          <li>　영상정보 리기기 운영관리방침　</li>
+          <li>　사이트맵　</li>
+        </ul>
+
+        <ul class="footerList3">
+          <li>고객센터 : 080-600-6000</li>
+        </ul>
+
+        <ul class="footerList4">
+          <li>COPYRIGHT ⓒ HYUNDAI MOTOR COMPANY. ALL RIGHTS RESERVED.</li>
+        </ul>
+      </div>
+
+
+      <div class="footerMenu2">
+        <ul class="footerList5">
+          <li><img src="../pictures/로고1.png" alt="" width="20"></li>
+          <li><img src="../pictures/로고2.png" alt="" width="20"></li>
+          <li><img src="../pictures/로고3.png" alt="" width="13" height="20"></li>
+          <li><img src="../pictures/로고4.png" alt="" width="20"></li>
+          <li><img src="../pictures/로고5.png" alt="" width="20"></li>
+          <li><img src="../pictures/로고6.png" alt="" width="20"></li>
+          <li><img src="../pictures/로고7.png" alt="" width="20"></li>
+        </ul>
+      </div>
+
+
+    </div>
+
+    <div class="footerContainer2">
+      <ul class="footerList6">
+        <li><img src="../pictures/로고8.png" alt="">웹 접근성 품질인증</li>
+        <li><img src="../pictures/로고9.png" alt="">
+          우수디자인 지식경제부선정
+        </li>
+        <li><img src="../pictures/로고10.png" alt="">
+          가족친화 우수기관
+        </li>
+        <li><img src="../pictures/로고11.png" alt="">
+          2022년 한국서비스품질지수 (KS- <br>
+          SQI) 자동차 A/S 부문 8년 연속 1위
+        </li>
+        <li><img src="../pictures/로고12.png" alt="">
+          2022년 한국품질만족지수 (KS- <br>
+          QEI) 조사 12개 부문 1위
+        </li>
+        <li><img src="../pictures/로고13.png" alt="">
+          2023년 국가고객만족도(NCSI) <br>
+          조사 대상 전 부문 1위 수상 (준중형, <br>
+          중형, 준대형, 대형, 컴팩트RV, <br>
+          대형RV, 전기차)
+        </li>
+        <li><img src="../pictures/로고14.png" alt="">
+          KMAC 선정<br>
+          2022년 한국산업의 고객만족도<br>
+          일반승용차 부문 29년 연속<br>
+          RV승용차 부문 19년 연속 1위<br>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

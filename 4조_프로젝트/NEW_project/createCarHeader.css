@@ -1,0 +1,680 @@
+@import url(reset.css);
+
+@font-face {
+    font-family: "현대폰트";
+    src: url(../font/현대하모니+L.ttf);
+}
+
+@font-face {
+    font-family: "현대폰트m";
+    src: url(../font/현대하모니+M.ttf);
+}
+
+
+@font-face {
+    font-family: "현대폰트b";
+    src: url(../font/현대하모니+B.ttf);
+}
+
+
+@font-face {
+    font-family: "나눔고딕";
+    src: url(../font/NanumGothic-Regular.ttf);
+}
+
+@font-face {
+    font-family: "나눔고딕eb";
+    src: url(../font/NanumGothic-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "나눔고딕b";
+    src: url(../font/NanumGothic-Bold.ttf);
+}
+
+html {
+    /* 드래그 방지 */
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+section {
+    display: block;
+}
+
+
+
+
+/*********************************footer div *********************************/
+
+footer {
+
+    background-color: rgb(28, 28, 28);
+
+
+}
+
+
+#mainLogo {
+    margin-top: -5px;
+}
+
+
+.footerContainer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+
+.footerMenu1 {
+    margin-left: -100px;
+}
+
+
+.footerList1,
+.footerList2,
+.footerList3,
+.footerList4 {
+    padding: 2px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footerList1>li,
+.footerList2>li,
+.footerList3>li {
+    font-size: 14px;
+    font-style: initial;
+    color: rgb(182, 182, 182);
+
+}
+
+.footerList4>li {
+    font-size: 12px;
+    font-style: initial;
+    color: rgb(182, 182, 182);
+}
+
+.footerList1>li::after,
+.footerList2>li::after,
+.footerList3>li::after {
+    content: "|";
+    float: right;
+    display: block;
+}
+
+.footerList1>li:last-child::after,
+.footerList2>li:last-child::after,
+.footerList3>li:last-child::after {
+    content: "";
+    float: right;
+    display: block;
+}
+
+
+.footerList5 {
+    display: flex;
+}
+
+.footerList5>li {
+    margin: 10px;
+}
+
+
+.footerContainer2 {
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+
+}
+
+
+
+.footerList6 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 25px;
+}
+
+
+.footerList6>li {
+    color: rgb(182, 182, 182);
+    font-size: 13px;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+
+
+
+
+/*****************************************************************************/
+
+
+
+/***************************header***************************************/
+
+#bgcOverray {
+    background-color: rgb(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%;
+    transform: all 1.5s ease-out;
+    z-index: 3;
+}
+
+
+header {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(27, 27, 27);
+}
+
+.headerTitle1 {
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px;
+
+}
+
+.headerTitle1>li {
+    color: white;
+    line-height: 22px;
+    margin-left: 10px;
+    font-family: "현대폰트";
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.headerTitle1>:last-child {
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+
+.headerTitle2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.headerTitle2>li {
+    color: white;
+    margin-left: 45px;
+    margin-top: -10px;
+    font-family: "현대폰트";
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.headerTitle2>:first-child {
+    color: grey;
+}
+
+.headerTitle2>:last-child {
+    margin-top: -25px;
+    margin-left: auto;
+    font-size: 15px;
+    padding: 10px;
+    margin-right: 40px;
+    border: 2px solid white;
+}
+
+.headerTitle2>:last-child:hover {
+    color: rgb(66, 66, 66);
+    background-color: white;
+    border: 2px solid rgb(51, 51, 51);
+}
+
+
+.infoContainer {
+    position: relative;
+}
+
+#summaryInfo {
+    position: absolute;
+    display: none;
+    width: 500px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    top: 16px;
+    right: 40px;
+    z-index: 10;
+}
+
+#infoBox {
+    margin: 30px;
+    margin-left: 50px;
+}
+
+#infoBox>h1 {
+    font-family: "현대폰트";
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#info {
+    z-index: 10;
+}
+
+#mainExit {
+    z-index: 10;
+}
+
+#exitBox {
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    top: 350px;
+    left: 650px;
+    z-index: 10;
+    border-radius: 20px;
+
+}
+
+#exitBox>div {
+    margin-left: 50px;
+}
+
+#exitBox>div>button {
+    background-color: rgb(28, 105, 212);
+    border-radius: 5px;
+    font-family: "나눔고딕";
+    font-weight: 600;
+    font-size: 17px;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+#exitBox>div>button:hover {
+    transition: 0.5s;
+    background-color: rgb(0, 25, 59);
+}
+
+#exitBox>h1 {
+    text-align: center;
+    margin-top: 100px;
+    font-family: "현대폰트";
+    font-weight: 500;
+    font-size: 22px;
+}
+
+/**********************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+/***************************OutCarColor body*****************************/
+
+
+
+.bodyContainer {
+    width: 100%;
+    height: 1000px;
+    background-size: cover;
+    background-image: url(../pictures/차량용배경2.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.carModelContainer {
+    width: 70%;
+}
+
+.carStateContainer {
+    width: 30%;
+    border-left: 3px solid white;
+    background-image: url(../pictures/차만들기배경.jpg);
+}
+
+#carModelList {
+    padding: 50px 80px;
+
+}
+
+#carModelList>h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: "현대폰트b";
+}
+
+#carModelList>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+
+}
+
+#carModelList>ul>:first-child {
+    color: white;
+    margin-right: auto;
+}
+
+#carModelList>ul>:nth-child(2) {
+    font-family: "현대폰트m";
+    color: white;
+    font-size: 23px;
+    margin-right: 25px;
+}
+
+#carModelList>ul>:last-child {
+    font-family: "현대폰트b";
+    color: white;
+    line-height: 10px;
+    font-size: 30px;
+}
+
+/*차량*/
+.carStateData {
+    position: relative;
+    width: 100%;
+    margin-left: 180px;
+    margin-top: -40px;
+}
+
+.carStateText {
+    position: absolute;
+    font-family: "현대폰트";
+    font-family: 600;
+    color: white;
+    font-size: 17px;
+    left: 150px;
+    top: 830px;
+}
+
+#modelBgc {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: -100px;
+    height: 500px;
+    background-image: url(../pictures/360도bgc.png);
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+#outColorBgc {
+    position: absolute;
+    width: 100%;
+    left: -100px;
+    z-index: 2;
+}
+
+
+
+#outBtn {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    margin: 10px;
+    width: 50px;
+    font-size: 40px;
+    border: none;
+    right: 15%;
+    cursor: pointer;
+}
+
+
+#leftBtn,
+#rightBtn {
+    margin-top: 200px;
+    z-index: 1;
+}
+
+#leftBtn {
+    position: absolute;
+    color: white;
+    font-size: 100px;
+    left: -100px;
+    cursor: pointer;
+}
+
+#rightBtn {
+    position: absolute;
+    color: white;
+    font-size: 100px;
+    right: 340px;
+    cursor: pointer;
+}
+
+#modelView {
+    position: absolute;
+
+}
+
+/***************************************************************/
+
+
+
+
+
+/****************************InCarColor*****************************/
+
+.outCarColor,
+.inCarColor {
+    font-family: "현대폰트b";
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.outCarColor>h1 {
+    color: white;
+    font-family: 600;
+    font-size: 35px;
+    margin-bottom: 50px;
+
+}
+
+.outCarColor>ul {
+    font-size: 25px;
+    display: flex;
+}
+
+.outCarColor>h3 {
+    font-family: "현대폰트";
+    color: white;
+    font-size: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+}
+
+
+
+#outCarColor1,
+#outCarColor2,
+#outCarColor3 {
+    margin: 20px;
+    width: 125px;
+    height: 125px;
+    cursor: pointer;
+}
+
+#outCarColor1 {
+    background-color: rgb(149, 146, 143);
+}
+
+#outCarColor2 {
+    background-color: rgb(25, 25, 25);
+}
+
+#outCarColor3 {
+    background-color: rgb(243, 244, 250);
+}
+
+
+.inCarColor>h3 {
+    font-family: "현대폰트";
+    color: white;
+    font-size: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+}
+
+.inCarColor>ul>li {
+    margin-top: 30px;
+}
+
+#inCarColor1,
+#inCarColor2 {
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+}
+
+
+
+#inCarColor1 {
+    background-image: url(../pictures/아이오닉_내장색상1.png);
+}
+
+#inCarColor2 {
+    background-image: url(../pictures/아이오닉_내장색상2.png);
+}
+
+
+
+#resultBtn {
+    font-family: "현대폰트";
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    width: 300px;
+    height: 50px;
+    margin: 30px;
+    margin-top: 50px;
+    margin-left: 130px;
+}
+
+#resultBtn:hover {
+    color: white;
+    background-color: rgb(63, 63, 63);
+    transition: 0.5s;
+}
+
+
+/*****************************************************************/
+
+
+
+
+/**********************************새 페이지************************************/
+
+section2 {
+    display: none;
+}
+
+
+.resultModelContainer {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../pictures/차만들기배경.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: '현대폰트b';
+    text-align: center;
+    z-index: -2;
+
+}
+
+#resultBgc>h1 {
+    padding-top: 80px;
+    font-family: 700;
+    font-size: 40px;
+    text-align: center;
+}
+
+#resultBgc>h3 {
+    padding: 50px;
+}
+
+
+
+#leftBtn5,
+#rightBtn5 {
+    margin-top: 350px;
+    cursor: pointer;
+    top: 200px;
+}
+
+#leftBtn5 {
+    position: absolute;
+    color: white;
+    font-size: 100px;
+    left: 400px;
+    cursor: pointer;
+}
+
+#rightBtn5 {
+    position: absolute;
+    color: white;
+    font-size: 100px;
+    right: 440px;
+    cursor: pointer;
+}
+
+#firecracker {
+    display: block;
+    position: absolute;
+    left: 650px;
+    top: 200px;
+    width: 600px;
+    height: 500px;
+    z-index: -1;
+}
+
+#loadingBox1 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    background-image: url(../pictures/로딩.gif);
+    background-position: 75px 25px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    top: 400px;
+    right: 50%;
+    width: 250px;
+    height: 150px;
+    z-index: 3;
+}
+
+#loadingBox1>h1 {
+    font-family: '현대폰트m';
+    font-style: oblique;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+
+/**********************************************************************/

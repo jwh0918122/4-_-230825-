@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>현대자동차 통합계정 - 로그인</title>
+    <style>
+        @font-face {
+            /*현대 하모니 폰트 다운 받고 3개 인스톨후  @구문 추가해봣음*/
+            font-family: '현대하모니+L';
+            src: url('fonts/현대하모니+L.ttf') format('truetype');
+        }
+
+
+
+        body {
+            font-family: '현대폰트';
+            text-align: center;
+            /* 로고와 기타 요소들을 기본적? 중앙으로 정렬 */
+            margin: 0px;
+        }
+
+
+        @font-face {
+            font-family: "현대폰트";
+            src: url(../font/현대하모니+L.ttf);
+        }
+
+        @font-face {
+            font-family: "현대폰트m";
+            src: url(../font/현대하모니+M.ttf);
+        }
+
+
+        @font-face {
+            font-family: "나눔고딕";
+            src: url(../font/NanumGothic-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: "나눔고딕bold";
+            src: url(../font/NanumGothic-Bold.ttf);
+        }
+
+
+        /* body { */
+        /* font-family: Nanum Gothic, sans-serif, Roboto, Helvetica, Arial; */
+        /* text-align: center; */
+        /* 로고와 기타 요소들을 기본적? 중앙으로 정렬 */
+        /* } */
+
+        /* 상단 파란색 바 */
+        .blue-bar {
+            background-color: rgb(0, 0, 87);
+            height: 6px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .flex-item {
+            flex: 1;
+            font-weight: 400;
+        }
+
+        .grey-line-bottom,
+        .grey-line-top {
+            border-bottom: 1px solid grey;
+            border-top: 1px solid grey;
+        }
+
+
+
+        button {
+            padding: 10px 20px;
+        }
+
+        .small-text {
+            font-size: 12px;
+        }
+
+        .spacer {
+            margin-top: 20px;
+        }
+
+        .spacer2 {
+            margin-top: 30px;
+            position: absolute;
+            top: 350px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spacer3 {
+
+            /* position: absolute; */
+            margin-top: 270px;
+
+        }
+
+
+        /* 로고 크기 조정 */
+        img {
+            max-width: 140px;
+
+            padding: auto;
+        }
+
+        #logo {
+            flex-grow: 0;
+            max-width: 25%;
+            flex-basis: 25%;
+            width: calc(100% + 24px);
+            margin: 20px;
+        }
+
+        .logo {
+            padding: 5px 5px 5px 5px;
+            margin: 0px 270px;
+            padding: 0px 0px;
+        }
+
+        .jss185 {
+            margin: 0;
+            display: block;
+        }
+
+        .jss199 {
+            color: rgba(0, 0, 0, 0.87);
+            font-size: 3rem;
+            font-family: "현대폰트";
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.04;
+        }
+
+        .jss218 {
+            color: rgba(0, 0, 0, 0.54);
+        }
+
+        .jss184 {
+            color: #666;
+
+            word-break: none;
+            font-family: "현대폰트";
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 15px;
+            padding-bottom: 7px;
+        }
+
+        .jss184::before {
+            width: 4px;
+            height: 4px;
+            margin: 6px 6px 0 0;
+            content: no-open-quote;
+            display: inline-block;
+            background: #999;
+            border-radius: 3px;
+            vertical-align: top;
+        }
+
+        .jss154 {
+            color: #666;
+            font-size: 16px;
+            word-break: none;
+            font-family: "현대폰트";
+            font-weight: 600;
+            line-height: 15px;
+            padding-bottom: 7px;
+        }
+
+        /* .jss4 {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .jss43 {
+            flex-grow: 0;
+            max-width: 100%;
+            flex-basis: 100%;
+        } */
+        .inner-box {
+            /* margin: 0px 280px; */
+            /* padding: 25px 20px; */
+            /* 공식---화면의 좌우 중앙에 위치하기 위한 공식 포지션 앱솔루트  */
+            position: absolute;
+            top: 220px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 410px;
+        }
+
+        .inner-box2 {
+            /* margin: 0px 280px; */
+            /* padding: 25px 20px; */
+            /* 공식---화면의 좌우 중앙에 위치하기 위한 공식 포지션 앱솔루트  */
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+        }
+
+        .jj {
+
+            text-align: left;
+            /* 텍스트를 왼쪽 정렬 */
+            padding-left: 0;
+            /* 왼쪽 패딩 제거 */
+            margin-left: 0;
+            /* 왼쪽 마진 제거 */
+        }
+
+        .input1 {
+            border-color: #dddddd;
+            border-style: solid;
+            border-width: 1px;
+            color: black;
+
+
+            /*여기선 마진이 안먹고 아래 input[]서 먹힘*/
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            display: block;
+            width: 97%;
+            padding: 10px 0;
+            margin: 0px 0;
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .input1::placeholder {
+            font-size: 12px;
+            color: rgba(119, 119, 119, 0.5);
+            /* 텍스트 색상 조절 */
+            font-weight: 900;
+        }
+
+
+        /* .jss3{
+            width: 300px;
+        } */
+        .root {
+            /* 공식 시작 ---화면의 정중앙에 위치하기 위한 공식 포지션 앱솔루트  */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn-input {
+            width: 100%;
+            height: 55px;
+            /* box-sizing: border-box; */
+            margin-bottom: 20px;
+            background-color: rgb(40, 120, 194);
+            border-radius: 1px;
+            border: 0;
+            cursor: pointer;
+            color: whitesmoke;
+            font-size: 17px;
+            font-weight: 900;
+        }
+
+        .hr1 hr {
+            margin-top: 80px;
+            border-color: #ffffff;
+        }
+
+        .hr2 hr {
+            margin-top: 260px;
+            border-color: #ffffff;
+        }
+
+
+        .jss165 {
+            color: #666;
+            font-size: 15px;
+            text-align: center;
+            font-family: "현대폰트";
+            line-height: 1.9;
+            /* padding-top: 10px; */
+            margin-bottom: 4px;
+        }
+
+        .jss166 {
+            display: flex;
+        }
+
+        .jss167 {
+            margin-left: auto;
+        }
+
+        .jss320 {
+            color: #666;
+            font-size: 10px;
+            font-family: "현대폰트";
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(40, 120, 194);
+            font-weight: 900;
+        }
+
+        .inner-box input:focus {
+            border-color: #0982f0;
+            outline: none;
+        }
+
+        .btn-input:hover {
+            background-color: rgb(10, 51, 90);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 상단 파란색 바 추가 -->
+    <div class="blue-bar"></div>
+    <div id="root">
+        <div class="jss4 jss43 ">
+            <div class="inner-box2 ">
+                <div id="logo" class="">
+                    <!-- 현대차 로고 -->
+                    <div class="logo jss185 ">
+                        <img src="../pictures/logo.png" alt="HYUNDAI" width="250" height="30">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hr1">
+            <hr>
+        </div>
+        <div class="jss4 jss43">
+
+            <div class="inner-box">
+
+
+                <h3 class="jss185 jss199 jss218 jss184 jss154 jj"><strong>이메일 로그인</strong></h3>
+                <input class="input1" aria-invalid="false" placeholder="이메일 주소" type="email" title="이메일 주소">
+                <input class="input1" aria-invalid="false" placeholder="비밀번호" type="password" title="비밀번호">
+
+                <a id="inputBox1" href="../NEW_project/myCar.html"><button type="submit"
+                        class="btn-input">로그인</button></a>
+
+
+                <div class="jss165 jss166"><a class="jss161" href="/web/v1/user/account-search">아이디 찾기</a>   |  <a
+                        class="jss161" href="/web/v1/user/password-init">비밀번호 초기화</a><span class="jss167"><a
+                            class="jss161" href="../loginPage/230823_join_perfect.html">회원가입</a>▶</span>
+                </div>
+                <!-- <div class="small-text">현대닷컴, 블루링크에서 사용하시던 이메일/비밀번호 그대로 로그인 하세요.</div> -->
+            </div>
+        </div>
+        <div class="hr2">
+            <hr>
+        </div>
+        <div class="spacer2">
+            <div class="jss165">
+                <a href="#">이용약관</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp<a href="#">개인정보 처리방침</a>
+            </div>
+            <div class="small-text jss4 jss43 jss320">COPYRIGHT © HYUNDAI MOTOR COMPANY. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <style>
+        @font-face {
+            /*현대 하모니 폰트 다운 받고 3개 인스톨후  @구문 추가해봣음*/
+            font-family: '현대하모니+L';
+            src: url('fonts/현대하모니+L.ttf') format('truetype');
+        }
+
+
+        @font-face {
+            font-family: "현대폰트";
+            src: url(../font/현대하모니+L.ttf);
+        }
+
+        @font-face {
+            font-family: "현대폰트m";
+            src: url(../font/현대하모니+M.ttf);
+        }
+
+
+        @font-face {
+            font-family: "나눔고딕";
+            src: url(../font/NanumGothic-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: "나눔고딕bold";
+            src: url(../font/NanumGothic-Bold.ttf);
+        }
+
+        body {
+            font-family: '현대폰트';
+            text-align: center;
+            /* 로고와 기타 요소들을 기본적? 중앙으로 정렬 */
+            margin: 0px;
+        }
+
+
+
+        /* 상단 파란색 바 */
+        .blue-bar {
+            background-color: rgb(0, 0, 87);
+            height: 6px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .root {
+            /* 공식 시작 ---화면의 정중앙에 위치하기 위한 공식 포지션 앱솔루트  */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .inner-box2 {
+            /* margin: 0px 280px; */
+            /* padding: 25px 20px; */
+            /* 공식---화면의 좌우 중앙에 위치하기 위한 공식 포지션 앱솔루트  */
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+        }
+
+        /* 로고 크기 조정 */
+        img {
+            max-width: 140px;
+
+            padding: auto;
+        }
+
+        #logo {
+            flex-grow: 0;
+            max-width: 25%;
+            flex-basis: 25%;
+            width: calc(100% + 24px);
+            margin: 20px;
+            padding: 5px 5px 5px 5px;
+            margin-top: 10px;
+            margin-left: -150px;
+            padding: 0px 0px;
+        }
+
+        .jss185 {
+            margin: 0;
+            display: block;
+        }
+
+        .div1 {
+            height: 60px;
+        }
+
+        #div2 {
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        #div2txt1 {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 20px 0px 20px 0px;
+        }
+
+        #div2txt2 {
+            margin: 20px 0px 130px 0px;
+            /* color: brown; */
+        }
+
+        .icon-q:before {
+            background-image: url(images/customer_center_ico_01.png)
+        }
+
+        #imgdiv {
+
+            font-size: 24px;
+            width: 22px !important;
+            height: 22px !important;
+            /* background-image: url(images/customer_center_ico_01.png); */
+            display: inline-block;
+            background-color: rgb(35, 149, 243);
+            border-radius: 50%;
+            /* margin-top: 5px;*/
+            margin-bottom: 10px;
+            margin: 0px;
+            padding-bottom: 0px;
+            color: aliceblue;
+            padding-top: 0px;
+            margin-left: 40px;
+
+        }
+
+        #imgdiv2 {
+            font-size: 14px;
+            width: 14px !important;
+            height: 14px !important;
+            /* background-image: url(images/customer_center_ico_01.png); */
+            display: inline-block;
+            background-color: rgb(13, 85, 143);
+            border-radius: 50%;
+            /* margin-top: 5px;*/
+            margin-bottom: 10px;
+            /* margin: 0px; */
+            padding-bottom: 0px;
+            color: aliceblue;
+            margin-left: -180px;
+            margin-top: 0px;
+            padding-left: -5px;
+        }
+
+        #imgdiv3 {
+            font-size: 14px;
+            width: 14px !important;
+            height: 14px !important;
+            /* background-image: url(images/customer_center_ico_01.png); */
+            display: inline-block;
+            background-color: rgb(13, 85, 143);
+            border-radius: 50%;
+            /* margin-top: 5px;*/
+            margin-bottom: 10px;
+            /* margin: 0px; */
+            padding-bottom: 0px;
+            color: aliceblue;
+            margin-left: -110px;
+            margin-top: 0px;
+            padding-left: -5px;
+        }
+
+        #imgtext {
+            /* width: 30px; */
+            /* height: 30px; */
+            display: inline-block;
+            margin-top: 10px;
+            padding-top: 5px;
+        }
+
+        #imgtext2 {
+            /* width: 30px; */
+            /* height: 30px; */
+            display: inline-block;
+            margin-top: 1px;
+            padding-top: 1px;
+            color: rgb(13, 85, 143);
+            font-size: 13px;
+        }
+
+        #div3 {
+            margin-left: -600px;
+        }
+
+        #div4 {
+            margin-top: 10px;
+            margin-left: -600px;
+        }
+
+        #div5 {
+            margin-top: 0px;
+            margin-left: -572px;
+        }
+
+        #dot1 {
+            font-size: 5px;
+            width: 5px !important;
+            height: 5px !important;
+            /* background-image: url(images/customer_center_ico_01.png); */
+            display: inline-block;
+            background-color: rgb(131, 131, 131);
+            border-radius: 50%;
+            /* margin-top: 5px;*/
+            margin-bottom: 10px;
+            margin: 0px;
+            padding-bottom: 0px;
+            color: rgb(255, 255, 255);
+            padding-top: 0px;
+            margin-left: -10px;
+        }
+
+        #dot2 {
+            font-size: 5px;
+            width: 5px !important;
+            height: 5px !important;
+            display: inline-block;
+            background-color: rgb(131, 131, 131);
+            border-radius: 50%;
+            margin-bottom: 10px;
+            margin: 0px;
+            padding-bottom: 0px;
+            color: rgb(255, 255, 255);
+            padding-top: 0px;
+            margin-left: 5px;
+        }
+
+        #dot3 {
+            font-size: 5px;
+            width: 5px !important;
+            height: 5px !important;
+            display: inline-block;
+            background-color: rgb(131, 131, 131);
+            border-radius: 50%;
+            margin-bottom: 10px;
+            margin: 0px;
+            padding-bottom: 0px;
+            color: rgb(255, 255, 255);
+            padding-top: 0px;
+            margin-left: 35px;
+        }
+
+        #dot4 {
+            font-size: 5px;
+            width: 5px !important;
+            height: 5px !important;
+            display: inline-block;
+            background-color: rgb(131, 131, 131);
+            border-radius: 50%;
+            margin-bottom: 10px;
+            margin: 0px;
+            padding-bottom: 0px;
+            color: rgb(255, 255, 255);
+            padding-top: 0px;
+            margin-left: 16px;
+        }
+
+        #dot5 {
+            font-size: 5px;
+            width: 5px !important;
+            height: 5px !important;
+            display: inline-block;
+            background-color: rgb(131, 131, 131);
+            border-radius: 50%;
+            margin-bottom: 10px;
+            margin: 0px;
+            padding-bottom: 0px;
+            color: rgb(255, 255, 255);
+            padding-top: 0px;
+            margin-left: -11px;
+        }
+
+        #dot6 {
+            font-size: 5px;
+            width: 5px !important;
+            height: 5px !important;
+            display: inline-block;
+            background-color: rgb(131, 131, 131);
+            border-radius: 50%;
+            margin-bottom: 10px;
+            margin: 0px;
+            padding-bottom: 0px;
+            color: rgb(255, 255, 255);
+            padding-top: 0px;
+            margin-left: -27px;
+        }
+
+        #dot7 {
+            font-size: 5px;
+            width: 5px !important;
+            height: 5px !important;
+            display: inline-block;
+            background-color: rgb(131, 131, 131);
+            border-radius: 50%;
+            margin-bottom: 10px;
+            margin: 0px;
+            padding-bottom: 0px;
+            color: rgb(255, 255, 255);
+            padding-top: 0px;
+            margin-left: 0px;
+        }
+
+
+        #dottext {
+            display: inline-block;
+        }
+
+        .input1_1 {
+            margin-top: 10px;
+            margin-bottom: 13px;
+            height: 30px;
+            width: 600px;
+            border-color: #dddddd;
+            border-style: solid;
+            border-width: 1px;
+            color: black;
+            margin-left: 540px;
+        }
+
+        .input1 {
+            margin-top: 10px;
+            height: 30px;
+            width: 600px;
+            border-color: #dddddd;
+            border-style: solid;
+            border-width: 1px;
+            color: black;
+            margin-left: 540px;
+            margin-bottom: 20px;
+        }
+
+        .input2 {
+            height: 30px;
+            width: 600px;
+            border-color: #dddddd;
+            border-style: solid;
+            border-width: 1px;
+            color: black;
+            margin-left: 540px;
+            /* margin-bottom: 20px; */
+            margin-top: -10px;
+            padding-top: -10px;
+        }
+
+        #divCarPic {
+            margin-top: 10px;
+            margin-left: 190px;
+        }
+
+        #rePwd {
+            margin-top: -10px;
+        }
+
+        #divPw {
+            margin-top: 0px;
+            margin-left: 570px;
+        }
+
+        #textarea1 {
+            margin-left: 512px;
+            margin-top: 10px;
+            width: 600px;
+            border-color: #dddddd;
+        }
+
+        .btn-input {
+            width: 17%;
+            height: 55px;
+            /* box-sizing: border-box; */
+            margin-bottom: 20px;
+            background-color: rgb(40, 120, 194);
+            border-radius: 1px;
+            border: 0;
+            cursor: pointer;
+            color: whitesmoke;
+            font-size: 17px;
+            font-weight: 900;
+        }
+
+        #divbtn {
+            margin-top: 20px;
+            margin-left: -40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 상단 파란색 바 추가 -->
+    <div class="blue-bar">
+
+    </div>
+
+
+    <div class="div1">
+        <div class="inner-box2 ">
+            <div id="logo">
+                <!-- 현대차 로고 -->
+                <div class="logo jss185 ">
+                    <img src="../pictures/logo.png" alt="HYUNDAI" width="300" height="30">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hr1">
+        <hr>
+    </div>
+    <div id="div2">
+        <div id="div2txt1">가입정보입력</div>
+        <div id="div2txt2">로그인 정보 및 가입 정보를 입력하세요.</div>
+    </div>
+    <div class="hr2">
+        <hr>
+    </div>
+
+
+    <div id="div3">
+        <div id="imgdiv">1</div>
+        <div id="imgtext">
+            <h3>회원정보 입력</h3>
+        </div>
+        <br>
+        <div id="dot1">ㆍ</div>
+        <div id="dottext">아이디</div>
+        <br>
+        <input class="input1" placeholder=" ID 입력">
+        <br>
+        <div id="dot2">ㆍ</div>
+        <div id="dottext">비밀번호</div>
+        <br>
+        <input class="input1_1" placeholder=" 비밀번호 입력">
+        <br>
+        <!-- <div id="dot3">ㆍ</div> -->
+        <!-- <div id="dottext">비밀번호 확인</div>  -->
+        <!-- <br> -->
+        <input id="rePwd" class="input2" placeholder=" 비밀번호 재입력">
+        <br>
+        <div id="divPw">
+            <div id="imgdiv2">i</div>
+            <div id="imgtext2">8~20자의 영문 대/소문자, 숫자, 특수문자 중 3가지 이상을 혼용하여 입력해 주세요.</div>
+        </div>
+        <!-- <div id="divCarPic">
+                <input type="file" ><br>
+                <div id="imgdiv2">i</div>     
+                <div  id="imgtext2">자차사진을 올려주세요</div>
+            </div> -->
+    </div>
+    <div id="div3">
+        <br>
+        <div id="dot4">ㆍ</div>
+        <div id="dottext">이메일주소</div> <br>
+        <input class="input1" aria-invalid="false" placeholder=" 이메일 주소" type="email" title="이메일 주소">
+    </div>
+    <div id="div3">
+        <div id="dot5">ㆍ</div>
+        <div id="dottext">닉네임</div> <br>
+        <input class="input1" aria-invalid="false" placeholder=" 닉네임 입력">
+    </div>
+    <div id="div3">
+        <div id="dot6">ㆍ</div>
+        <div id="dottext">주소</div> <br>
+        <input class="input1" aria-invalid="false" placeholder=" 주소 입력">
+    </div>
+    <div id="div3">
+        <div id="dot7">ㆍ</div>
+        <div id="dottext">차량사진</div> <br>
+        <div id="divCarPic">
+            <input type="file"><br>
+            <div id="imgdiv3">i</div>
+            <div id="imgtext2">자차사진을 올려주세요</div>
+        </div>
+    </div>
+    <div id="div4">
+        <div id="dot6">ㆍ</div>
+        <div id="dottext">이름</div> <br>
+        <input class="input1" aria-invalid="false" placeholder=" 이름 입력">
+    </div>
+    <div id="div5">
+        <div id="dot6">ㆍ</div>
+        <div id="dottext">자기소개</div> <br>
+        <textarea name="" id="textarea1" cols="30" rows="3" placeholder="자기소개 입력"></textarea>
+    </div>
+
+    <div id="divbtn">
+        <a href="../loginPage/230823_joinEndpage_perfect.html">
+            <button type="submit" class="btn-input">작성 완료</button>
+        </a>
+    </div>
+    <!--
+        아이디
+        비번
+        비번확인
+        닉네임
+        주소
+        차량사진(버튼) 첨부파일개념
+        이름
+        자기소개
+        로그인버튼(A태그 만들기)
+    -->
+
+</body>
+
+</html>
